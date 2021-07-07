@@ -1,0 +1,7 @@
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\bin\Debug\Challenge.Two.Claims.Console.exe.config
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\bin\Debug\Challenge.Two.Claims.Console.exe
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\bin\Debug\Challenge.Two.Claims.Console.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.csproj.AssemblyReference.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.csproj.CoreCompileInputs.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.exe
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.pdb

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Challenge.One.Cafe.Repository
 {
-    class MenuItem_Repo
+    public class MenuItemRepo
     {
-        List<MenuItem> _menu = new List<MenuItem>();
+        private readonly List<MenuItem> _menu = new List<MenuItem>();
         //create
         public bool AddMenuItem(MenuItem menuItem)
         {
@@ -17,11 +17,11 @@ namespace Challenge.One.Cafe.Repository
         }
         //read
         public List<MenuItem> GetAllMenuItems() => _menu;
-        public MenuItem GetMenuItemByNumber(int mealNumer)
+        public MenuItem GetMenuItemByNumber(int mealNumber)
         {
             foreach (var menuItem in _menu)
             {
-                if (menuItem.MealNumber == mealNumer)
+                if (menuItem.MealNumber == mealNumber)
                 {
                     return menuItem;
                 }
@@ -33,14 +33,18 @@ namespace Challenge.One.Cafe.Repository
         //SomeKindOfUpdateMethdos()
 
         //delete
+        public bool DelelteMenuItem(MenuItem itemToDelete)
+        {
+            _menu.Remove(itemToDelete);
+            return !(_menu.Contains(itemToDelete));
+        }
         public bool DeleteMenuItemByNumber(int mealNumber)
         {
             foreach (var menuItem in _menu)
             {
                 if (menuItem.MealNumber == mealNumber)
                 {
-                    _menu.Remove(menuItem);
-                    return !(_menu.Contains(menuItem));
+                    return DelelteMenuItem(menuItem);
                 }
             }
             return false;

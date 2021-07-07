@@ -11,16 +11,16 @@ namespace Challenge.One.Cafe.Repository
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string MealDescription { get; set; }
-        public List<string> ListOfIngredients { get; set; }
+        public List<string> Ingredients { get; set; }
         public decimal Price { get; set; }
         
         public MenuItem() { }
-        public MenuItem(int mealNumber, string mealName, string mealDescription, List<string> listOfIngredients, decimal price)
+        public MenuItem(int mealNumber, string mealName, string mealDescription, List<string> ingredients, decimal price)
         {
             MealNumber = mealNumber;
             MealName = mealName;
             MealDescription = mealDescription;
-            ListOfIngredients = listOfIngredients;
+            Ingredients = ingredients;
             Price = price;
         }
     }

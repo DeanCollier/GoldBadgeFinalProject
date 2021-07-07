@@ -10,6 +10,8 @@ namespace Challenge.One.Cafe.Console
     {
         static void Main(string[] args)
         {
+            ProgramUI userInterface = new ProgramUI();
+            //userInterface.Start();
         }
     }
 }
