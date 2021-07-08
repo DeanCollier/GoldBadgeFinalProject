@@ -28,10 +28,8 @@ namespace Challenge.One.Cafe.Repository
             }
             return null;
         }
-
         //No need to update menu items right now
         //SomeKindOfUpdateMethdos()
-
         //delete
         public bool DelelteMenuItem(MenuItem itemToDelete)
         {

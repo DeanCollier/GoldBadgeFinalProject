@@ -8,7 +8,7 @@ namespace Challenge.One.Cafe.UnitTests
     [TestClass]
     public class UnitTest1
     {
-        private MenuItemRepo repo = new MenuItemRepo();
+        private MenuItemRepo _repo = new MenuItemRepo();
 
         [TestInitialize]
         public void Seed()
@@ -20,7 +20,7 @@ namespace Challenge.One.Cafe.UnitTests
             var price = 10.95m;
 
             var firstItem = new MenuItem(mealNumber, mealName, mealDescription, ingredients, price);
-            repo.AddMenuItem(firstItem);
+            _repo.AddMenuItem(firstItem);
 
             mealNumber = 2;
             mealName = "In-TEST-ines";
@@ -29,7 +29,7 @@ namespace Challenge.One.Cafe.UnitTests
             price = 12.49m;
 
             var secondItem = new MenuItem(mealNumber, mealName, mealDescription, ingredients, price);
-            repo.AddMenuItem(secondItem);
+            _repo.AddMenuItem(secondItem);
         }
         [TestMethod]
         public void CreateMenuItemInRepo_ShouldAddToMenuList()
@@ -42,15 +42,15 @@ namespace Challenge.One.Cafe.UnitTests
             bool itemAdded = false;
             var itemToAdd = new MenuItem(mealNumber,mealName,mealDescription,ingredients,price);
 
-            itemAdded = repo.AddMenuItem(itemToAdd);
+            itemAdded = _repo.AddMenuItem(itemToAdd);
 
             Assert.IsTrue(itemAdded);
         }
         [TestMethod]
         public void GetAllMenuItems_ShouldReturnEntireListOfItems()
         {
-            //should only be 2 menu items in the test repo
-            int count = repo.GetAllMenuItems().Count;
+            //should only be 2 menu items in the test _repo
+            int count = _repo.GetAllMenuItems().Count;
 
             Assert.AreEqual(2, count);
         }
@@ -59,7 +59,7 @@ namespace Challenge.One.Cafe.UnitTests
         {
             int mealNumber = 1;
             MenuItem testItem = new MenuItem();
-            testItem = repo.GetMenuItemByNumber(mealNumber);
+            testItem = _repo.GetMenuItemByNumber(mealNumber);
 
             Assert.AreEqual(mealNumber, testItem.MealNumber);
         }
@@ -69,7 +69,18 @@ namespace Challenge.One.Cafe.UnitTests
             int mealNumber = 2;
             bool itemDeleted = false;
 
-            itemDeleted = repo.DeleteMenuItemByNumber(mealNumber);
+            itemDeleted = _repo.DeleteMenuItemByNumber(mealNumber);
+
+            Assert.IsTrue(itemDeleted);
+        }
+        [TestMethod]
+        public void DeleteMenuItem_ShouldDeleteMenuItemFromList()
+        {
+            bool itemDeleted = false;
+            MenuItem testItem = new MenuItem();
+            _repo.AddMenuItem(testItem); //already tested above
+
+            itemDeleted = _repo.DelelteMenuItem(testItem);
 
             Assert.IsTrue(itemDeleted);
         }
