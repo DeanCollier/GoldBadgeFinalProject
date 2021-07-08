@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 
-namespace Challenge.One.Cafe.UnitTests
+namespace ChallengeOneCafe_UnitTests
 {
     [TestClass]
     public class UnitTest1

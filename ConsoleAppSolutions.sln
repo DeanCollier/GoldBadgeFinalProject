@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.One.Cafe.Console", "Challenge.One.Cafe.Console\Challenge.One.Cafe.Console.csproj", "{5390DFB5-FFA0-4E82-95E9-895F9771103D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOneCafe_Console", "Challenge.One.Cafe.Console\ChallengeOneCafe_Console.csproj", "{5390DFB5-FFA0-4E82-95E9-895F9771103D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Two.Claims.Console", "Challenge.Two.Claims.Console\Challenge.Two.Claims.Console.csproj", "{3335B005-BDC8-4760-B2F3-4556D3B8F844}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTwoClaims_Console", "Challenge.Two.Claims.Console\ChallengeTwoClaims_Console.csproj", "{3335B005-BDC8-4760-B2F3-4556D3B8F844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.One.Cafe.Repository", "Challenge.One.Cafe.Repository\Challenge.One.Cafe.Repository.csproj", "{6EADA74B-57FF-422B-99AB-CC1B49860128}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOneCafe_Repository", "Challenge.One.Cafe.Repository\ChallengeOneCafe_Repository.csproj", "{6EADA74B-57FF-422B-99AB-CC1B49860128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.One.Cafe.UnitTests", "Challenge.One.Cafe.UnitTests\Challenge.One.Cafe.UnitTests.csproj", "{94D8D2BD-81E1-4280-A43C-8229A07EDF6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOneCafe_UnitTests", "Challenge.One.Cafe.UnitTests\ChallengeOneCafe_UnitTests.csproj", "{94D8D2BD-81E1-4280-A43C-8229A07EDF6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

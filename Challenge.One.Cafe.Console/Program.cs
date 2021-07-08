@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Challenge.One.Cafe.Console
+namespace ChallengeOneCafe_Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            ProgramUI userInterface = new ProgramUI();
-            //userInterface.Start();
+            ProgramUI _userInterface = new ProgramUI();
+            _userInterface.Start();
         }
     }
 }

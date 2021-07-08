@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Challenge.One.Cafe.Repository\Challenge.One.Cafe.Repository.csproj">
+    <ProjectReference Include="..\Challenge.One.Cafe.Repository\ChallengeOneCafe_Repository.csproj">
       <Project>{6eada74b-57ff-422b-99ab-cc1b49860128}</Project>
-      <Name>Challenge.One.Cafe.Repository</Name>
+      <Name>ChallengeOneCafe_Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
