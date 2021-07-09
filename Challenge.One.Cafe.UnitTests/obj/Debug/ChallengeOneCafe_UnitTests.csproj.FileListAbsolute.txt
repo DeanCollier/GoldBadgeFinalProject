@@ -1,0 +1,16 @@
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Challenge.One.Cafe.UnitTests.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Challenge.One.Cafe.UnitTests.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Challenge.One.Cafe.Repository.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Challenge.One.Cafe.Repository.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\obj\Debug\ChallengeOneCafe_UnitTests.csproj.AssemblyReference.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\obj\Debug\ChallengeOneCafe_UnitTests.csproj.CoreCompileInputs.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\obj\Debug\ChallengeOneCafe_UnitTests.csproj.CopyComplete
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\obj\Debug\Challenge.One.Cafe.UnitTests.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.UnitTests\obj\Debug\Challenge.One.Cafe.UnitTests.pdb

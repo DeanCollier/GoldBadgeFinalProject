@@ -1,0 +1,10 @@
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\bin\Debug\Challenge.One.Cafe.Console.exe.config
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\bin\Debug\Challenge.One.Cafe.Console.exe
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\bin\Debug\Challenge.One.Cafe.Console.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\bin\Debug\Challenge.One.Cafe.Repository.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\bin\Debug\Challenge.One.Cafe.Repository.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\obj\Debug\ChallengeOneCafe_Console.csproj.AssemblyReference.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\obj\Debug\ChallengeOneCafe_Console.csproj.CoreCompileInputs.cache
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\obj\Debug\ChallengeOneCafe_Console.csproj.CopyComplete
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\obj\Debug\Challenge.One.Cafe.Console.exe
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.One.Cafe.Console\obj\Debug\Challenge.One.Cafe.Console.pdb

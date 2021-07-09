@@ -1,4 +1,5 @@
-﻿using Challenge.One.Cafe.Repository;
+﻿
+using ChallengeOneCafe_Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
