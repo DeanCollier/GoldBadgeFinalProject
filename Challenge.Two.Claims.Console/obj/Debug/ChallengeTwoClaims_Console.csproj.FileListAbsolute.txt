@@ -5,3 +5,6 @@ D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challen
 D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\ChallengeTwoClaims_Console.csproj.CoreCompileInputs.cache
 D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.exe
 D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\Challenge.Two.Claims.Console.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\bin\Debug\ChallengeTwoClaims_Repository.dll
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\bin\Debug\ChallengeTwoClaims_Repository.pdb
+D:\1150\Gold_Badge_Final_Project\ConsoleAppSolutions\ConsoleAppSolutions\Challenge.Two.Claims.Console\obj\Debug\ChallengeTwoClaims_Console.csproj.CopyComplete

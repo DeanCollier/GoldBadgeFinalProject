@@ -15,8 +15,6 @@ namespace ChallengeTwoClaims_Console
         {
             _repo = repoType;
         }
-        
-
         public void Start()
         {
             Seed();
@@ -30,17 +28,50 @@ namespace ChallengeTwoClaims_Console
                 OpenMenuItem(userInput);
             }
         }
+        private string GetMenuSelection()
+        {
+            Console.WriteLine("Welcome to Komodo's Claim Menu.\n" +
+                              "Select a menu option:\n" +
+                              "1. See all claims\n" +
+                              "2. Take care of next claim\n" +
+                              "3. Enter a new claim\n" +
+                              "4. Exit");
+            string userInput = Console.ReadLine();
+            return userInput;
+        }
 
         private void OpenMenuItem(string userInput)
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            switch (userInput)
+            {
+                case "1":
+                    //DisplayAllClaims();
+                    break;
+                case "2":
+                    //TakeCareOfNextClaim();
+                    break;
+                case "3":
+                    //AddNewClaim();
+                    break;
+                case "4":
+                    isRunning = false;
+                    return;
+                default:
+                    Console.WriteLine("Invalid Selection.");
+                    PressKeyToReturnMainMenu();
+                    return;
+            }
         }
 
-        private string GetMenuSelection()
+        //------------------------------------------------------------------------------------------------------------------------
+        private void PressKeyToReturnMainMenu()
         {
-            return Console.ReadLine();
+            Console.WriteLine("Press any key to return to the main menu: ");
+            Console.ReadKey();
+            Console.Clear();
+            RunMenu();
         }
-
         private void Seed()
         {
             var claimID = 1;
