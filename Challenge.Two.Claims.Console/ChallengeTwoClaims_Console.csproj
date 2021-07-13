@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChallengeTwoClaims_Repository\ChallengeTwoClaims_Repository.csproj">
+      <Project>{6AFFD683-AD62-4EC6-81FD-23C360FF822E}</Project>
+      <Name>ChallengeTwoClaims_Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

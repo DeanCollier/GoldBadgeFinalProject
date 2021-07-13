@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeTwoClaims_Repository
 {
-    public class ClaimRepo
+    public class ClaimRepo : IClaimRepo
     {   
         private readonly List<Claim> _claims = new List<Claim>();
 
@@ -29,7 +29,6 @@ namespace ChallengeTwoClaims_Repository
         }
         //doesn't look like this assignment needs any updating methods
         //SomeUpdateMethods();
-
         public bool DeleteClaim(Claim claimToDelete)
         {
             return _claims.Remove(claimToDelete);

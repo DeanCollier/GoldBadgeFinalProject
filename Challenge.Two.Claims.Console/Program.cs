@@ -1,4 +1,4 @@
-﻿using Challenge.Two.Claims.Console;
+﻿using ChallengeTwoClaims_Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +11,9 @@ namespace ChallengeTwoClaims_Console
     {
         static void Main(string[] args)
         {
-            ProgramUI _userInterface = new ProgramUI();
-            //_userInterface.Start();
+            IClaimRepo repoType = new ClaimRepo();
+            ProgramUI _userInterface = new ProgramUI(repoType);
+            _userInterface.Start();
         }
     }
 }

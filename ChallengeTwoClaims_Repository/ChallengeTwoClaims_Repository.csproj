@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Claim.cs" />
     <Compile Include="ClaimRepo.cs" />
+    <Compile Include="IClaimRepo.cs" />
+    <Compile Include="PCClaim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

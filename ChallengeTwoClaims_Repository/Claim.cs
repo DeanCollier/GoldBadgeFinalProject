@@ -12,6 +12,7 @@ namespace ChallengeTwoClaims_Repository
         Home,
         Theft
     }
+    
     public class Claim
     {
         public int ClaimID { get; set; }
