@@ -33,8 +33,7 @@ namespace ChallengeOneCafe_Repository
         //delete
         public bool DelelteMenuItem(MenuItem itemToDelete)
         {
-            _menu.Remove(itemToDelete);
-            return !(_menu.Contains(itemToDelete));
+            return _menu.Remove(itemToDelete);
         }
         public bool DeleteMenuItemByNumber(int mealNumber)
         {

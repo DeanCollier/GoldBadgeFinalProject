@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Challenge.Two.Claims.Console;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace ChallengeTwoClaims_Console
     {
         static void Main(string[] args)
         {
+            ProgramUI _userInterface = new ProgramUI();
+            //_userInterface.Start();
         }
     }
 }
