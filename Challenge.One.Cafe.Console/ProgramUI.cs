@@ -192,8 +192,8 @@ namespace ChallengeOneCafe_Console
         private void Seed()
         {
             var mealNumber = 1;
-            var mealName = "Bull TEST-icles";
-            var mealDescription = "This is a test desription, yum!";
+            var mealName = "Komodo Bites";
+            var mealDescription = "Komodo dragon nuggets, probably illegal, but delicious!";
             var ingredients = new List<string> { "list", "of", "test", "ingredients" };
             var price = 10.95m;
 
@@ -201,8 +201,8 @@ namespace ChallengeOneCafe_Console
             _repo.AddMenuItem(firstItem);
 
             mealNumber = 2;
-            mealName = "In-TEST-ines";
-            mealDescription = "Wow, that's some good test puns!";
+            mealName = "The Dragon Dog";
+            mealDescription = "100% ground Komodo.";
             ingredients = new List<string> { "some", "other", "test", "ingredients" };
             price = 12.49m;
 
