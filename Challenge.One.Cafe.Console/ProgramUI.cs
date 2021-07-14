@@ -108,12 +108,7 @@ namespace ChallengeOneCafe_Console
             }
             return ingredientList;
         }
-        private decimal EnterNewItemPrice(string mealName)
-        {
-            Console.WriteLine($"How much will {mealName} cost?");
-            string mealNumber = IsThisCorrect(Console.ReadLine().ToLower());
-            return decimal.Parse(mealNumber);
-        }
+        
         private int EnterNewItemNumber(string mealName)
         {
             Console.WriteLine($"Enter the menu item number for {mealName}:");
@@ -184,7 +179,7 @@ namespace ChallengeOneCafe_Console
         }
         private void PressKeyToReturnMainMenu()
         {
-            Console.WriteLine("Press any key to return to the main menu: ");
+            Console.WriteLine("Press any key to return to the main menu... ");
             Console.ReadKey();
             Console.Clear();
             RunMenu();

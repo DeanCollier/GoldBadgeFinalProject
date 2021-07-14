@@ -16,8 +16,8 @@ namespace ChallengeTwoClaims_UnitTests
             var claimType = TypeOfClaim.Car;
             var description = "Car melted in lava";
             var claimAmount = 5000m;
-            var dateOfIncident = new DateTime(6 / 13 / 2021);
-            var dateOfClaim = new DateTime(7 / 10 / 2021);
+            var dateOfIncident = new DateTime(2021,6,13);
+            var dateOfClaim = new DateTime(2021,7,10);
 
             var firstClaim = new Claim(claimID, claimType, description, claimAmount, dateOfIncident, dateOfClaim);
             _repo.AddNewClaim(firstClaim);
@@ -26,8 +26,8 @@ namespace ChallengeTwoClaims_UnitTests
             claimType = TypeOfClaim.Home;
             description = "Home exploded randomly";
             claimAmount = 350000m;
-            dateOfIncident = new DateTime(4 / 20 / 2020);
-            dateOfClaim = new DateTime(4 / 22 / 2020);
+            dateOfIncident = new DateTime(2020,4,20);
+            dateOfClaim = new DateTime(2020,4,22);
 
             var secondClaim = new Claim(claimID, claimType, description, claimAmount, dateOfIncident, dateOfClaim);
             _repo.AddNewClaim(secondClaim);
@@ -39,8 +39,8 @@ namespace ChallengeTwoClaims_UnitTests
             var claimType = TypeOfClaim.Theft;
             var description = "Someone stole my computer";
             var claimAmount = 1000m;
-            var dateOfIncident = new DateTime(5 / 13 / 2021);
-            var dateOfClaim = new DateTime(7 / 10 / 2021);
+            var dateOfIncident = new DateTime(2021,5,13);
+            var dateOfClaim = new DateTime(2021,7,10);
             var itemAdded = false;
             var testClaim = new Claim(claimID, claimType, description, claimAmount, dateOfIncident, dateOfClaim);
             
