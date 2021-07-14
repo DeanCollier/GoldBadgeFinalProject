@@ -134,6 +134,7 @@ namespace ChallengeTwoClaims_Console
             bool claimAdded = false;
             Claim newClaim = new Claim(claimID, claimType, desc, amount, dateOfAccident, dateOfClaim);
             claimAdded = _repo.AddNewClaim(newClaim);
+            Console.Clear();
             if (claimAdded)
             {
                 Console.WriteLine("This claim has been added:");
