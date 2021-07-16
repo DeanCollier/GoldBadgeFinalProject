@@ -11,7 +11,7 @@ namespace ChallengeThreeBadge_Repository
         bool AddNewBadge(Badge badgeToAdd);
         Dictionary<int, Badge> GetAllBadges();
         Badge GetBadgeByID(int badgeID);
-        Badge UpdateBadgeDoorAccess(int badgeID, List<string> accessDoors);
+        bool UpdateBadgeDoorAccess(int badgeID, List<string> accessDoors);
         bool DeleteBadgeByID(int badgeID);
     }
 }

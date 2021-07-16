@@ -108,7 +108,13 @@ namespace ChallengeOneCafe_Console
             }
             return ingredientList;
         }
-        
+        private decimal EnterNewItemPrice(string mealName)
+        {
+            Console.WriteLine($"How much will {mealName} cost?:");
+            string price = IsThisCorrect(Console.ReadLine().ToLower());
+            return decimal.Parse(price);
+        }
+
         private int EnterNewItemNumber(string mealName)
         {
             Console.WriteLine($"Enter the menu item number for {mealName}:");

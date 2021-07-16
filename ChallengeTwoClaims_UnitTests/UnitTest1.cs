@@ -10,7 +10,7 @@ namespace ChallengeTwoClaims_UnitTests
         private IClaimRepo _repo = new ClaimRepo();
 
         [TestInitialize]
-        private void Seed()
+        public void Seed()
         {
             var claimID = 1;
             var claimType = TypeOfClaim.Car;

@@ -20,24 +20,24 @@ namespace ChallengeThreeBadge_Repository
 
         public Badge GetBadgeByID(int badgeID)
         {
-            foreach (var badge in _badges)
+            foreach (var dictItem in _badges)
             {
-                if (badge.Key == badgeID)
+                if (dictItem.Key == badgeID)
                 {
-                    return badge.Value;
+                    return dictItem.Value;
                 }
             }
             return null;
         }
 
-        public Badge UpdateBadgeDoorAccess(int badgeID, List<string> accessDoors)
+        public bool UpdateBadgeDoorAccess(int badgeID, List<string> accessDoors)
         {
             if (GetBadgeByID(badgeID) != null)
             {
                 _badges[badgeID].AccessDoors = accessDoors;
-                return _badges[badgeID];
+                return true;
             }
-            return null;
+            return false;
             
         }
 
