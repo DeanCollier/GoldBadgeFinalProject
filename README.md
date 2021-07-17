@@ -25,7 +25,7 @@ git clone https://github.com/DeanCollier/GoldBadgeFinalProject
 - [Git Pull Documenation](https://git-scm.com/docs/git-pull)
 
 ### 3. Komodo Cafe Menu
-This is an app that allows the Komodo Cafe to create new menu items and add them to thier system.
+This app allows the Komodo Cafe to add/remove menu items to their system.
 
 ### 4. Komodo Insurance Claims
 This app allows the Komodo claims department to take care of claims in the queue, as well as adding new claims to the queue.
