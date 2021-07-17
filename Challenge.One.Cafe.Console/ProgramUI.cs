@@ -110,14 +110,14 @@ namespace ChallengeOneCafe_Console
         }
         private decimal EnterNewItemPrice(string mealName)
         {
-            Console.WriteLine($"How much will {mealName} cost?:");
+            Console.WriteLine($"How much will {mealName} cost? (enter price as number):");
             string price = IsThisCorrect(Console.ReadLine().ToLower());
             return decimal.Parse(price);
         }
 
         private int EnterNewItemNumber(string mealName)
         {
-            Console.WriteLine($"Enter the menu item number for {mealName}:");
+            Console.WriteLine($"Enter the menu item number for {mealName}: (must be number)");
             string mealNumber = Console.ReadLine().ToLower();
             foreach (var menuItem in _repo.GetAllMenuItems())
             {

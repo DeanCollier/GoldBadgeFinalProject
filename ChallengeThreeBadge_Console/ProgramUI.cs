@@ -36,7 +36,7 @@ namespace ChallengeThreeBadge_Console
                               "2. Update door access on an existing badge\n" +
                               "3. Delete all doors from an existing badge\n" +
                               "4. Create a new badge\n" +
-                              "5. Delete Bagden\n" +
+                              "5. Delete Bagde\n" +
                               "6. Exit");
             return Console.ReadLine();
         }
