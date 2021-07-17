@@ -44,13 +44,22 @@ namespace ChallengeThreeBadge_Console
             switch (userInput)
             {
                 case "1":
+                    Console.Clear();
                     DisplayAllBadges();
+                    PressKeyToReturnMainMenu();
                     return;
                 case "2":
+                    Console.Clear();
+                    UpdateDoorAccess();
+                    PressKeyToReturnMainMenu();
                     return;
                 case "3":
+                    Console.Clear();
+                    DeleteBadgeDoorAccess();
+                    PressKeyToReturnMainMenu();
                     return;
                 case "4":
+                    Console.Clear();
                     return;
                 case "5":
                     isRunning = false;
@@ -64,18 +73,200 @@ namespace ChallengeThreeBadge_Console
         }
         private void DisplayAllBadges()
         {
+            Console.WriteLine("Current badges in system: ");
             foreach (var dictItem in _repo.GetAllBadges())
             {
                 DisplayBadgeByID(dictItem.Value.BadgeID);
             }
+            
         }
         private void DisplayBadgeByID(int badgeID)
         {
-            Console.WriteLine($"BadgeID: {_repo.GetBadgeByID(badgeID).BadgeID}\n" +
-                              $"DoorAcces: {string.Join(",",_repo.GetBadgeByID(badgeID).AccessDoors)}");
-            Console.WriteLine("");  
+            bool exists = false;
+            foreach (var badge in _repo.GetAllBadges())
+            {
+                if (badge.Key == badgeID)
+                {
+                    exists = true;
+                }
+            }
+            if (exists)
+            {
+                Console.WriteLine($"BadgeID: {_repo.GetBadgeByID(badgeID).BadgeID}\n" +
+                              $"DoorAcces: {string.Join(",", _repo.GetBadgeByID(badgeID).AccessDoors)}");
+                Console.WriteLine("");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"Badge {badgeID} does not exist.");
+                PressKeyToReturnMainMenu();
+            }
+
+            
+        }
+        private void UpdateDoorAccess()
+        {
+            Console.WriteLine("*UPDATE BADGE DOOR ACCESS*");
+            Console.WriteLine("Do you want to: \n" +
+                              "1. Delete door/s access from a badge?\n" +
+                              "2. Add door/s access to a badge?");
+            string updateChoice = Console.ReadLine();
+            switch (updateChoice)
+            {
+                case "1":
+                    Console.Clear();
+                    DeleteSpecificDoors();
+                    return;
+                case "2":
+                    Console.Clear();
+                    AddSpecificDoors();
+                    return;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("Invalid input...");
+                    return;
+            }
+        }
+        private void DeleteSpecificDoors()
+        {
+            Console.WriteLine("*DELETE DOOR ACCESS*");
+            DisplayAllBadges();
+            Console.WriteLine("Which badge would you like to delete door/s from? (Enter Badge ID#)");
+            string badgeIDString = Console.ReadLine();
+            badgeIDString = IsThisCorrect(badgeIDString);
+            int badgeID = int.Parse(badgeIDString);
+            Console.Clear();
+
+            DisplayBadgeByID(badgeID);
+            Console.WriteLine("What doors would you like to delete from this badge?");
+            List<string> doorsToDelete = GetDoorList(badgeID);
+            if (DeleteSpecificDoorsByBadgeID(badgeID, doorsToDelete))
+            {
+                Console.Clear();
+                Console.WriteLine($"Doors removed from {badgeID}.");
+                DisplayBadgeByID(badgeID);
+                return;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid input...");
+                return;
+            }
+
+
+        }
+        private void AddSpecificDoors()
+        {
+            Console.WriteLine("*ADD DOOR ACCESS*");
+            DisplayAllBadges();
+            Console.WriteLine("Which badge would you like to add door/s to? (Enter Badge ID#)");
+            string badgeIDString = Console.ReadLine();
+            badgeIDString = IsThisCorrect(badgeIDString);
+            int badgeID = int.Parse(badgeIDString);
+            Console.Clear();
+
+            DisplayBadgeByID(badgeID);
+            Console.WriteLine("What doors would you like to add to this badge?");
+            List<string> doorsToAdd = GetDoorList(badgeID);
+            if (AddSpecificDoorsByBadgeID(badgeID, doorsToAdd))
+            {
+                Console.Clear();
+                Console.WriteLine($"Doors added to {badgeID}.");
+                DisplayBadgeByID(badgeID);
+                return;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid input...");
+                return;
+            }
+        }
+        private List<string> GetDoorList(int badgeID)
+        {
+            bool moreDoors = true;
+            List<string> doorList = new List<string>();
+            string doorChoice;
+            while (moreDoors)
+            {
+                Console.WriteLine("Enter door name: ");
+                doorChoice = Console.ReadLine();
+                doorList.Add(doorChoice.ToUpper());
+                Console.WriteLine("Any other doors? (y/n)");
+                if (Console.ReadLine() == "n")
+                {
+                    moreDoors = false;
+                }
+            }
+            return doorList;
+
+        }
+        private bool DeleteSpecificDoorsByBadgeID(int badgeID, List<string> doorDeleteList)
+        {
+            List<string> updateDoorList = new List<string>();
+            foreach (var door in _repo.GetBadgeByID(badgeID).AccessDoors)
+            {
+                if (!doorDeleteList.Contains(door))
+                {
+                    updateDoorList.Add(door);
+                }
+            }
+            return _repo.UpdateBadgeDoorAccess(badgeID, updateDoorList);
+        }
+        private bool AddSpecificDoorsByBadgeID(int badgeID, List<string> doorAddList)
+        {
+            List<string> updateDoorList = _repo.GetBadgeByID(badgeID).AccessDoors;
+            foreach (var door in doorAddList)
+            {
+                if (!_repo.GetBadgeByID(badgeID).AccessDoors.Contains(door))
+                {
+                    updateDoorList.Add(door);
+                }
+            }
+            return _repo.UpdateBadgeDoorAccess(badgeID, updateDoorList);
+        }
+        private void DeleteBadgeDoorAccess()
+        {
+            Console.WriteLine("*DELETE ALL DOOR ACCESS FROM BADGE*");
+            DisplayAllBadges();
+            Console.WriteLine("Which badge ID would you like to delete? (Enter Badge ID#): ");
+            string badgeIDString = Console.ReadLine();
+            badgeIDString = IsThisCorrect(badgeIDString);
+            int badgeID = int.Parse(badgeIDString);
+            if (DeleteAllDoorsByBadgeID(badgeID))
+            {
+                Console.Clear();
+                Console.WriteLine($"All door access for badge {badgeID} has been deleted: ");
+                DisplayBadgeByID(badgeID);
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong :/");
+            }
+        }
+        private bool DeleteAllDoorsByBadgeID(int badgeID)
+        {
+            List<string> emptyList = new List<string>();
+            return _repo.UpdateBadgeDoorAccess(badgeID, emptyList);
         }
         //---------------------------------------------------------------------------------------------
+        private string IsThisCorrect(string thingToCheck)
+        {
+            Console.WriteLine($"Is this correct? (y/n)\n" +
+                               thingToCheck);
+            string answer = Console.ReadLine().ToLower();
+            while (answer != "y")
+            {
+                Console.WriteLine("Let's try that again.");
+                thingToCheck = Console.ReadLine().ToLower();
+                Console.WriteLine($"Is this correct? (y/n)\n" +
+                               thingToCheck);
+                answer = Console.ReadLine().ToLower();
+            }
+            return thingToCheck;
+        }
         private void PressKeyToReturnMainMenu()
         {
             Console.WriteLine("Press any key to return to the main menu... ");
