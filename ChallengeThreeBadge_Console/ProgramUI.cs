@@ -36,7 +36,8 @@ namespace ChallengeThreeBadge_Console
                               "2. Update door access on an existing badge\n" +
                               "3. Delete all doors from an existing badge\n" +
                               "4. Create a new badge\n" +
-                              "5. Exit");
+                              "5. Delete Bagden\n" +
+                              "6. Exit");
             return Console.ReadLine();
         }
         private void OpenMenuItem(string userInput)
@@ -60,8 +61,15 @@ namespace ChallengeThreeBadge_Console
                     return;
                 case "4":
                     Console.Clear();
+                    CreateNewBadge();
+                    PressKeyToReturnMainMenu();
                     return;
                 case "5":
+                    Console.Clear();
+                    DeleteBadge();
+                    PressKeyToReturnMainMenu();
+                    return;
+                case "6":
                     isRunning = false;
                     return;
                 default:
@@ -82,18 +90,11 @@ namespace ChallengeThreeBadge_Console
         }
         private void DisplayBadgeByID(int badgeID)
         {
-            bool exists = false;
-            foreach (var badge in _repo.GetAllBadges())
-            {
-                if (badge.Key == badgeID)
-                {
-                    exists = true;
-                }
-            }
+            bool exists = BadgeIDExists(badgeID);
             if (exists)
             {
                 Console.WriteLine($"BadgeID: {_repo.GetBadgeByID(badgeID).BadgeID}\n" +
-                              $"DoorAcces: {string.Join(",", _repo.GetBadgeByID(badgeID).AccessDoors)}");
+                                  $"DoorAcces: {string.Join(",", _repo.GetBadgeByID(badgeID).AccessDoors)}");
                 Console.WriteLine("");
                 return;
             }
@@ -140,7 +141,7 @@ namespace ChallengeThreeBadge_Console
 
             DisplayBadgeByID(badgeID);
             Console.WriteLine("What doors would you like to delete from this badge?");
-            List<string> doorsToDelete = GetDoorList(badgeID);
+            List<string> doorsToDelete = GetDoorList();
             if (DeleteSpecificDoorsByBadgeID(badgeID, doorsToDelete))
             {
                 Console.Clear();
@@ -169,7 +170,7 @@ namespace ChallengeThreeBadge_Console
 
             DisplayBadgeByID(badgeID);
             Console.WriteLine("What doors would you like to add to this badge?");
-            List<string> doorsToAdd = GetDoorList(badgeID);
+            List<string> doorsToAdd = GetDoorList();
             if (AddSpecificDoorsByBadgeID(badgeID, doorsToAdd))
             {
                 Console.Clear();
@@ -184,7 +185,7 @@ namespace ChallengeThreeBadge_Console
                 return;
             }
         }
-        private List<string> GetDoorList(int badgeID)
+        private List<string> GetDoorList()
         {
             bool moreDoors = true;
             List<string> doorList = new List<string>();
@@ -251,7 +252,72 @@ namespace ChallengeThreeBadge_Console
             List<string> emptyList = new List<string>();
             return _repo.UpdateBadgeDoorAccess(badgeID, emptyList);
         }
+        private void CreateNewBadge()
+        {
+            Console.WriteLine("*CREATE NEW BADGE*");
+            DisplayAllBadges();
+            Console.WriteLine("Enter ID# for new badge: ");
+            string badgeIDString = Console.ReadLine();
+            int badgeID = int.Parse(IsThisCorrect(badgeIDString));
+            bool exists = BadgeIDExists(badgeID);
+            if (exists)
+            {
+                Console.Clear();
+                Console.WriteLine($"Badge ID# {badgeID} already exists...");
+                return;
+            }
+            Console.WriteLine("Enter employee name for new badge: ");
+            string employeeName = Console.ReadLine();
+            employeeName = IsThisCorrect(employeeName);
+            Console.WriteLine($"What door would you like {badgeID} ({employeeName}) to have access to?");
+            List<string> accessDoors = GetDoorList();
+            Badge newBadge = new Badge(badgeID, accessDoors, employeeName);
+            if (_repo.AddNewBadge(newBadge))
+            {
+                Console.Clear();
+                Console.WriteLine("Badge added to system.");
+                DisplayBadgeByID(badgeID);
+                return;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Something went wrong...");
+                return;
+            }
+
+        }
+        private void DeleteBadge()
+        {
+            Console.WriteLine("*DELTE A BADGE*");
+            DisplayAllBadges();
+            Console.WriteLine("What badge would you like to delete? (Enter Badge ID#)");
+            if (_repo.DeleteBadgeByID(int.Parse(Console.ReadLine())))
+            {
+                Console.WriteLine("Badge Deleted.");
+                DisplayAllBadges();
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong...");
+                DisplayAllBadges();
+                return;
+            }
+
+        }
         //---------------------------------------------------------------------------------------------
+        private bool BadgeIDExists(int badgeID)
+        {
+            foreach (var badge in _repo.GetAllBadges())
+            {
+                if (badge.Key == badgeID)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private string IsThisCorrect(string thingToCheck)
         {
             Console.WriteLine($"Is this correct? (y/n)\n" +
